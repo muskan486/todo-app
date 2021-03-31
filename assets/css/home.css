@@ -1,0 +1,183 @@
+
+body{
+    background-color: bisque;
+    font-family:cursive;
+    margin: 0;
+
+}
+
+p{
+    font-size: 0.8rem;
+    color: rgb(80, 243, 255);
+}
+
+#main{
+    width:50%;
+    height:auto;
+    background-color: cornsilk;
+    border-radius: 6px;
+    margin-top: 50%;
+    margin:auto;
+    box-shadow: 0 11px 13px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#main-heading{
+    text-align: center;
+    color:crimson;
+    font-size: 1.5rem;
+    font-family:serif;
+    padding:10px;
+    margin-top:50px;
+
+}
+#desc-cont{
+    width:auto;
+    padding:30px;
+    padding-bottom: 30px;
+    border-top:1px solid burlywood;
+    border-bottom: 1px solid burlywood;
+}
+#desc-cont p,#category-box p,#date-box p{
+   display:inline;
+   font-size: 1.2rem; 
+}
+#desc-cont p{
+padding-left:3px;
+padding-bottom:5px;
+padding-right:3px;
+font-weight: bold;
+}
+
+#desc{
+    width:75%;
+    background-color:transparent;
+    border:1px solid black;
+    opacity:0.5;
+    height:5%;
+    font-size: 1rem;
+    color:rgb(153, 36, 36);
+    
+}
+.category-date{
+    display: flex;
+}
+#cat-heading{
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+#choose-cat{
+    color:rgba(11, 69, 145, 0.89);
+}
+select{
+    width:100%;
+    border:1px solid black;
+    background-color: transparent;
+    opacity:0.5;
+    font-size: 1rem;
+    color:rgb(146, 33, 33);
+}
+#date-input{
+    width:75%;
+    border:1px solid black;
+    background-color: transparent;
+    opacity: 0.5;
+    font-size: 1.2rem;
+    color:rgb(133, 28, 28);
+}
+#category-box{
+    padding:10px;
+    width:50%;
+    border-right:1px solid rgb(153, 117, 51);
+}
+#date-box p{
+font-weight: bold;
+}
+#date-box{
+    width:50%;
+    padding-left:11px;
+    padding:9px;
+}
+.buttons-add-delete{
+    display:flex;
+    justify-content: center;
+    padding:22px;
+    border-bottom: 1px solid burlywood;
+    border-top: 1px solid burlywood;
+}
+.add-button{
+    background-color: cornflowerblue;
+    color: white;
+    height:100%;
+    width:100%;
+    padding:15px;
+    margin-right:25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: cursive;
+}
+.del-button{
+    background-color: violet;
+    color: white;
+    margin-right: 4px;
+    border-radius: 5px;
+    height:100%;
+    width:100%;
+    font-family: cursive;
+    font-size: 1rem;
+}
+.add-button:hover{
+    background-color: rgb(245, 102, 102);
+
+}
+.del-button:hover{
+    background-color: rgb(245,102,102);
+}
+
+#task:nth-child(2n){
+    background-color: rgba(181, 129, 241, 0.712);
+}
+#task:nth-child(2n+1){
+    background-color: rgba(0, 0, 0, 0.123);
+}
+
+.show-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#task{
+    flex:0 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top:15px;
+    padding-bottom:10px;
+    border-bottom:1px solid rgb(153, 64, 29);
+}
+#task-cat{
+    background-color: rgba(156, 94, 22, 0.664);
+    color: white;
+    width:85px;
+    text-transform: uppercase;
+    text-align: center;
+    padding:3px;
+    height:20px;
+    margin-left: 11px;
+
+}
+#task-desc{
+    color: rgb(19, 18, 19);
+    font-size: 1.2rem;
+    text-transform:uppercase;
+    font-family: sans-serif;
+}
+#task-date{
+    color: rgb(199, 98, 98);
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+#check{
+    outline: 2px solid rgb(238, 245, 245);
+    color: violet;
+    margin-top:11px;
+}

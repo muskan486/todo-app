@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width,initial-scale=1.0">
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" 
+            integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" 
+            crossorigin="anonymous">
+
+        <title> <%= title%> </title>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+          <div id="main">
+             <h1 id="main-heading">TODO APP</h1>
+             <!-- desciption box in form  -->
+             <form action="/create-todo" method="POST">
+                    
+                    <div id="desc-cont">
+                        <p>DESCRIPTION:</p>
+                        &nbsp;&nbsp;
+                        <input id="desc" type="text" name="description" placeholder="What do you need to do?" required>
+                    </div>
+                    <!-- category and date fields  -->
+                    <div class="category-date">
+                          
+                        <div id="category-box">
+                              <p id="cat-heading">CATEGORY:</p>
+                <br>
+                              <p id="choose-cat">Choose a category below</p>
+                                <br>
+                              <select name="category">
+                                  <option style="display:none"></option>
+                                  <option value="office">Office</option>
+                                  <option value="personal">Personal</option>
+                                  <option value="eat">Eat</option>
+                                  <option value="drink">Drink</option>
+                                  <option value="party">Party</option>
+                              </select>
+
+                        </div>
+                         
+                        <div id="date-box">
+                             <p>DUE DATE:</p><br><br>
+                             <input id="date-input" type="date" name="date" placeholder="" required>
+                        </div> 
+
+                    </div>
+<!-- buttons for add and delete task -->
+                    <div class="buttons-add-delete">
+                         
+                        <div>
+
+                            <button type="submit" class="add-button">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                &nbsp; ADD TASK
+                            </button>
+
+                        </div>
+                        &nbsp;&nbsp;
+                        <div>
+
+                            <button type="submit" class="del-button" form="delete1">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                &nbsp; DELETE TASKS
+                            </button>
+
+                        </div>
+                    </div>
+             </form>
+       <!-- showing added todo list items  -->
+             <div class="show-list">
+                  
+                    <form id="delete1" action="/delete-todo" method="POST">
+                         <% for(let i = todo_list.length-1;i>=0;i--) { %>
+
+                            <div id="task">
+                                <input type="checkbox" id="check" name=task value="<%= todo_list[i]._id %>"> 
+                                
+                                <div class="task-box">
+
+                                    <span id="task-desc">
+                                        <%= todo_list[i].description %>
+                                    </span>
+                                   <br>
+                                   <span id="task-date">
+                                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                                      &nbsp;
+                                      <%= todo_list[i].date %>
+                                   </span>
+
+                                </div>
+                                <div id="task-cat">
+                                     <%= todo_list[i].category %>
+                                </div>
+                            
+                               
+
+                             </div>
+                             <% } %>
+                    </form>
+
+             </div>
+
+          </div>
+    </body>
+</html>
